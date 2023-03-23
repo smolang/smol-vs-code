@@ -14,9 +14,7 @@ jobs:
       - name: Package VS Code extension
         id: package
         uses: nhedger/package-vscode-extension@v1
-        with:
-          extensionPath: ./abs
-          # preRelease: true
+        # preRelease: true
       - name: Extract release notes
         id: extract-release-nodes
         uses: ffurrer2/extract-release-notes@v1
