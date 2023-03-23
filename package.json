@@ -1,0 +1,36 @@
+{
+    "name": "smol",
+    "displayName": "SMOL",
+    "description": "Support for the SMOL language",
+    "version": "0.0.1",
+    "author": {
+        "name": "Rudolf Schlatte"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/smolang/smol-vs-code/"
+    },
+    "homepage": "https://github.com/smolang/smol-vs-code",
+    "bugs": {
+        "url": "https://github.com/smolang/smol-vs-code/issues"
+    },
+    "engines": {
+        "vscode": "^1.76.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "smol",
+            "aliases": ["SMOL", "smol"],
+            "extensions": [".smol"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "smol",
+            "scopeName": "source.smol",
+            "path": "./syntaxes/smol.tmLanguage.json"
+        }]
+    }
+}

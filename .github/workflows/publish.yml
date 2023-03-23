@@ -1,0 +1,31 @@
+name: publish
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Package VS Code extension
+        id: package
+        uses: nhedger/package-vscode-extension@v1
+        with:
+          extensionPath: ./abs
+          # preRelease: true
+      - name: Extract release notes
+        id: extract-release-nodes
+        uses: ffurrer2/extract-release-notes@v1
+        # prerelease: true
+        with:
+          changelog_file: CHANGELOG.md
+      - name: Upload artifact
+        uses: softprops/action-gh-release@v1
+        with:
+          body: ${{ steps.extract-release-notes.outputs.release_notes }}
+          files: ${{ steps.package.outputs.packagePath }}
+          # prerelease: true
