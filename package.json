@@ -2,7 +2,7 @@
     "name": "smol",
     "displayName": "SMOL",
     "description": "Support for the SMOL language",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "smolang-org",
     "author": {
         "name": "Rudolf Schlatte"
