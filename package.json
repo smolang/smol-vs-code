@@ -3,6 +3,7 @@
     "displayName": "SMOL",
     "description": "Support for the SMOL language",
     "version": "0.0.1",
+    "publisher": "smolang-org",
     "author": {
         "name": "Rudolf Schlatte"
     },
@@ -15,11 +16,12 @@
         "url": "https://github.com/smolang/smol-vs-code/issues"
     },
     "engines": {
-        "vscode": "^1.76.0"
+        "vscode": "^1.77.0"
     },
     "categories": [
         "Programming Languages"
     ],
+    "main": "./out/extension.js",
     "contributes": {
         "languages": [{
             "id": "smol",
@@ -37,6 +39,58 @@
                 "language": "smol",
                 "path": "./snippets/smol.json"
             }
-        ]
-    }
+        ],
+        "commands": [
+            {
+                "command": "smol.runRepl",
+                "title": "Run REPL",
+                "category": "SMOL"
+            }
+        ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "smol.runRepl",
+                    "when": "editorLangId == smol"
+                }
+            ]
+        },
+        "terminal": {
+            "profiles": [
+                {
+                    "title": "SMOL REPL",
+                    "id": "smol.runRepl"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "SMOL",
+            "properties": {
+                "smol.smolJarPath": {
+                    "type": "string",
+                    "default": "build/libs/smol.jar"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts"
+    },
+  "devDependencies": {
+    "@types/vscode": "^1.77.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "@vscode/test-electron": "^2.2.3"
+  }
 }

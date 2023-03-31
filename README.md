@@ -7,7 +7,14 @@ can serve as a test bed for creating digital twins.
 
 ## Features
 
-Currently this extension provides only syntax highlighting.
+This extension provides syntax highlighting, and a command to run a SMOL REPL
+inside VS Code.
+
+## Extension Settings
+
+This extension contributes the following settings:
+
+- `smol.smolJarPath`: The path to `smol.jar`.
 
 ## Release Notes
 
@@ -39,12 +46,11 @@ To use the extension from a git checkout, copy this directory into your
 
 ## Development
 
-To run the current source, open this folder inside VS Code and press `F5` (Run
--> Start Debugging).
+First, install [node](https://nodejs.org/en) then run `npm install` to install
+the required dependencies.
 
-To create a `.vsix` package, install [node](https://nodejs.org/en) then run
-the following commands:
+To run the current source, open the project folder inside VS Code and press
+`F5` (Run -> Start Debugging).
 
-    npm install
-    vsce package
+To create a `.vsix` package, run `vsce package`.
 

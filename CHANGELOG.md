@@ -10,6 +10,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - The extension now supports snippets:
   - `class` plus TAB expands to a class template
+  
+- Add command `Run SMOL REPL` to open a REPL.  Set the parameter
+  `smol.smolJarPath` to point to `smol.jar`.
 
 ### Changed
 
