@@ -8,6 +8,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ### Added
 
+- The extension now supports snippets:
+  - `class` plus TAB expands to a class template
+
 ### Changed
 
 ### Removed

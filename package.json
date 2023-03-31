@@ -31,6 +31,12 @@
             "language": "smol",
             "scopeName": "source.smol",
             "path": "./syntaxes/smol.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "smol",
+                "path": "./snippets/smol.json"
+            }
+        ]
     }
 }
