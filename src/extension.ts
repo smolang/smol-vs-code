@@ -26,6 +26,8 @@ export function activate(context: vscode.ExtensionContext) {
                 });
             return;
         }
+        // TODO(rudi): try to find the absolute path of the Java executable,
+        // or possibly make it a configuration option (or use JAVA_HOME)
         const javaCmd = 'java' + (process.platform === 'win32' ? '.exe' : '');
         const args:string[] = ["-jar", jarPath];
         vscode.window.createTerminal({

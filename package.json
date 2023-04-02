@@ -24,17 +24,26 @@
     "main": "./out/extension.js",
     "activationEvents": [],
     "contributes": {
-        "languages": [{
-            "id": "smol",
-            "aliases": ["SMOL", "smol"],
-            "extensions": [".smol"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "smol",
-            "scopeName": "source.smol",
-            "path": "./syntaxes/smol.tmLanguage.json"
-        }],
+        "languages": [
+            {
+                "id": "smol",
+                "aliases": [
+                    "SMOL",
+                    "smol"
+                ],
+                "extensions": [
+                    ".smol"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "smol",
+                "scopeName": "source.smol",
+                "path": "./syntaxes/smol.tmLanguage.json"
+            }
+        ],
         "snippets": [
             {
                 "language": "smol",
