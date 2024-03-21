@@ -2,6 +2,7 @@
     "name": "smol",
     "displayName": "SMOL",
     "description": "Support for the SMOL language",
+    "icon": "images/smol-extension-icon.png",
     "version": "0.0.2",
     "publisher": "smolang-org",
     "author": {
