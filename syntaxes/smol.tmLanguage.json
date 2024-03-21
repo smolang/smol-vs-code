@@ -104,7 +104,7 @@
                     "name": "keyword.control.statement.smol"
                 },
                 {
-                    "match": "\\b(new|super|abstract|class|extends|rule|override|private|protected|nonsemantic|models|domain|in|out|access|construct|member|simulate|validate|tick|main|end)\\b",
+                    "match": "\\b(new|super|abstract|hidden|class|extends|rule|override|private|protected|nonsemantic|models|classifies|domain|in|out|access|construct|classify|reclassify|member|simulate|validate|tick|main|end)\\b",
                     "name": "keyword.other.smol"
                 }
             ]
