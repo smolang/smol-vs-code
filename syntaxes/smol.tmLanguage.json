@@ -104,15 +104,15 @@
                     "name": "keyword.control.statement.smol"
                 },
                 {
-                    "match": "\\b(new|super|abstract|hidden|class|extends)\\b",
+                    "match": "\\b(new|super|abstract|hidden|context|class|extends)\\b",
                     "name": "keyword.other.class-definition.smol"
                 },
                 {
-                    "match": "\\b(rule|override|private|protected|nonsemantic|models|classifies|domain|in|out)\\b",
+                    "match": "\\b(rule|override|private|protected|nonsemantic|models|classifies|retrieves|domain|in|out)\\b",
                     "name": "keyword.other.model-definition.smol"
                 },
                 {
-                    "match": "\\b(access|construct|classify|reclassify|member|simulate|validate|tick|main|end)\\b",
+                    "match": "\\b(access|construct|classify|adapt|member|simulate|validate|tick|main|end)\\b",
                     "name": "keyword.other.smol"
                 }
             ]
